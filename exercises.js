@@ -1,5 +1,5 @@
 
-// For each of the functions lised below, indicate the O notation as wll as your reasoning behind the answer.
+// For each of the functions lised below, indicate the O notation as well as your reasoning behind the answer.
 
 // 1. Even or odd
 
@@ -10,6 +10,8 @@ function isEven(value){
     else
       return false;
   }
+
+ //Constant Time Complexity - O(1), whether you give it a small number or a really big number, it still just does a quick check and gives you the answer without taking longer for bigger numbers."
   
 
   
@@ -25,6 +27,8 @@ function isEven(value){
       }
       return false;
   }
+
+ //Quadratic Time Complexity - O(n^2), here yo have a nested array, where you have a nested loop on an O(n) operation inside of and O(n) operation. As n grows larger,the runtime grows even larger, it grows n*n
   
   
 // 3. Doubler
@@ -35,7 +39,8 @@ function isEven(value){
       }
       return array;
   }
-  
+
+//Linear Time Complexity - O(n), the size of the array increases so the time increases to execute the function. The larger the n, the more work the function and/or program has to do. 
 
   
 // 4. New Search
@@ -47,6 +52,8 @@ function isEven(value){
           }
       }
   }
+
+//Linear Time Complexity -  O(n), because it iterates through the array once, and the time taken is directly proportional to the size of the array.
   
   
 // 5. Creating Pairs
@@ -58,6 +65,8 @@ function isEven(value){
           }
       }
   }
+
+//Quadratic Time Complexity - O(n^2), everytime I see a nested loop I'm considering it a quadratic. You have a nested loop on an O(n) operation inside of and O(n) operation. As n grows larger,the runtime grows even larger, it grows n*n
   
 
   
@@ -78,7 +87,7 @@ function isEven(value){
     }
     return result;
   }
-  
+ //Linear Time Complexity -  O(n), because it iterates through the array once, and the time taken is directly proportional to the size of the array. The time it takes to make the list grows at the same rate as the size of the list.
 
   
 // 7. Efficient Search
@@ -105,6 +114,8 @@ function isEven(value){
       }
       return -1;
   }
+
+  //Logarithmic Time Complexity -  O(log n) - This function implements a binary search algorithm. In a binary search, the algorithm repeatedly divides the search interval in half, reducing the size of the search space by half with each iteration.
   
 
 // 8. Random element
@@ -112,6 +123,8 @@ function isEven(value){
   function findRandomElement(arr) {
       return arr[Math.floor(Math.random() * arr.length)];
   }
+
+//Constant Time Complexity - O(1), This conclusion is reached because regardless of the size of the input array (arr), the time it takes for the function to execute remains constant.
   
   
 // 9. Is It Prime?
@@ -125,7 +138,7 @@ function isEven(value){
       }
       return true;
   }
-  
+ //Linear Time Complexity -  O(n), for this function means that as the size of the number you're checking (let's call it "n") gets larger, the time it takes for the function to run also increases at about the same rate. 
   
   
 // 10. Factorial of a number w/ recursion
@@ -138,4 +151,8 @@ function isEven(value){
           default: return n * factorialOf(n - 1);
       }
   }
+
+  //Linear Time Complexity -  O(n), For the base case (when n is 0 or 1), the function returns immediately, regardless of the input. So, it takes constant time, which we can consider as O(1).
+  
+  
   
